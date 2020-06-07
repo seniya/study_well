@@ -1,5 +1,5 @@
 // https://www.typescriptlang.org/docs/handbook/basic-types.html
-// [array, tuple, enum, any, void, never, interface, Optional Properties(선택적 프로퍼티) ] in Typescript
+// [array, tuple, enum, any, void, never, interface, Optional Properties(선택적 프로퍼티), Decorator ] in Typescript
 
 // #1 array
 // Array<T> 제네릭을 사용하겠다는 의미로 꺽쇠(Angle brackets)
@@ -79,3 +79,6 @@ const myParm2:addStringConfig = {
   z: 'c'
 }
 console.log('#8 Optional Properties :>> ', addString(myParm2))
+
+// #9 Decorator : 장식품 like 'java의 annotation'
+// https://typescript-kr.github.io/pages/Decorators.html
