@@ -1,4 +1,4 @@
-# 01_crud_start
+# 02_route_page
 
 ## Project setup
 ```
@@ -9,15 +9,8 @@ npm install
 
 elint - standard 설치됨.
 axios 설치
-
-
-```js
-// .eslintrc.js
-rules: {
-  "semi": [2, "always"]
-}
-```
-
+route 설치
+구조 설정 (pages/users/list, view, create, update)
 
 ```
 npm run serve
