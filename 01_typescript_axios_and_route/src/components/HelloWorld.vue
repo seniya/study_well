@@ -1,5 +1,7 @@
 <template>
-  <div>{{msg}}</div>
+  <div class="hello">
+    <h1>{{ msg }}</h1>
+  </div>
 </template>
 
 <script lang="ts">
@@ -13,28 +15,19 @@ export default class HelloWorld extends Vue {
   async mounted() {
     console.log('HellowWorld mounted');
 
-    const users = await this.responseUsers();
-
+    const users = await this.getUsers();
     console.log('users : ', users);
   }
 
-  responseUsers = async () => {
-    await axios({
+  getUsers = async () => {
+    const response = axios({
       method: 'get',
       headers: {
         Authorization: 'Bearer FRdRtwQDq9yrCqpCqP6376ufKK_W47U8d_R_'
       },
       url: 'https://gorest.co.in/public-api/users'
-    })
-      .then(result => {
-        console.log('aaaa', result);
-      })
-      .catch(err => {
-        console.log('err', err);
-      });
+    });
+    return await response;
   };
 }
 </script>
-
-<style>
-</style>

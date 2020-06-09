@@ -16,9 +16,9 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'semi': [0],
     'space-before-function-paren': ['error', {
-      anonymous: 'always',
+      anonymous: 'never',
       named: 'never',
-      asyncArrow: 'always'
+      asyncArrow: 'never'
     }]
   }
 }
