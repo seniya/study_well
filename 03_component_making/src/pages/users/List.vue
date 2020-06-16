@@ -3,9 +3,11 @@
     <h1>리스트 페이지</h1>
     <ul>
       <li v-for="(user, index) in users" :key="index">
-        <a href="#" @click.prevent="readDetailUser(user)">{{
+        <a href="#" @click.prevent="readDetailUser(user)">
+          {{
           `${user.first_name} ${user.last_name} (${user.gender}) ${user.email}`
-        }}</a>
+          }}
+        </a>
       </li>
     </ul>
   </div>
@@ -31,10 +33,10 @@ export default class List extends Vue {
     console.log('this.$route : ', this.$route);
   }
 
-  readDetailUser(user: UserConfig) {
+  readDetailUser(user: UserConfig): void {
     console.log('readDetailUser user : ', user);
     console.log('this.$route.path : ', this.$route.path);
-    console.log('router : ', router.push('home'));
+    router.push(`/detail/${user.id}`);
     // this.$route.push({ name: '/' });
     // router.push({ name: 'home' });
     // router.

@@ -27,12 +27,12 @@ const routes: RouteConfig[] = [
   },
 
   {
-    path: '/update',
+    path: '/update/:id',
     name: 'update',
     component: Update
   },
   {
-    path: '/detail',
+    path: '/detail/:id',
     name: 'detail',
     component: Detail
   }
