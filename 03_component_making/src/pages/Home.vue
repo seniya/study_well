@@ -1,5 +1,7 @@
 <template>
-  <div>사이트 홈 페이지</div>
+  <div>
+    <h1>사이트 홈 페이지</h1>
+  </div>
 </template>
 
 <script lang="ts">
